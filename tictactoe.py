@@ -42,7 +42,11 @@ while pos1== " " or pos2== " " or pos3== " " or pos4== " " or pos5== " " or pos6
                 pos9 = player
         else: 
                 print ("Invalid move choose a different number")
-
+                #allowing replay for invalid move
+                if player=="X":
+                        player="O:"
+                elif player=="O":
+                        player="X" 
         # checking for a winner
         if (pos1==pos2==pos3==player) or (pos4==pos5==pos6==player) or (pos7==pos8==pos9==player) or (pos1==pos5==pos9==player) or (pos3==pos5==pos7==player) or (pos1==pos4==pos7==player) or (pos2==pos5==pos8==player) or (pos3==pos6==pos9==player):
                 print()
